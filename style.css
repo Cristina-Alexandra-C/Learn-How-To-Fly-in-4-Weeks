@@ -8,6 +8,19 @@
    - Sky Blue (Hero BG): #A2DEE9
    ========================================= */
 
+/* Update the H1 in Hero Section */
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    
+    /* The Magic Gradient Code */
+    background: linear-gradient(90deg, var(--brand-blue) 0%, var(--cta-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
 :root {
     --cta-color: #FF9A8C;      /* Primary Action Button */
     --brand-blue: #4C72D8;     /* Headings, Icons, Logo */
@@ -507,4 +520,104 @@ footer {
         flex-direction: column;
         width: 100%;
     }
+}
+/* Define the animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply it to the Hero Content */
+.hero-content {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Apply it to the Book Image with a slight delay so they move separately */
+.hero-image {
+    opacity: 0; /* Hidden at start */
+    animation: fadeInUp 1s ease-out 0.5s forwards; /* 0.5s delay */
+}
+
+/* =========================================
+   FAQ SECTION
+   ========================================= */
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-responsive */
+    gap: 2rem;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.faq-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 5px solid var(--brand-blue); /* Blue accent line on the left */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px); /* Gentle lift on hover */
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--brand-blue);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq-item i {
+    color: var(--neutral-bg); /* Subtle icon color */
+}
+
+.faq-item p {
+    font-size: 0.95rem;
+    color: var(--dark-text);
+    opacity: 0.8;
+}
+/* =========================================
+   SCROLL TO TOP BUTTON
+   ========================================= */
+
+.scroll-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--brand-blue); /* Royal Blue */
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Makes it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Unclickable when hidden */
+    transition: all 0.3s ease;
+}
+
+.scroll-btn:hover {
+    background-color: var(--cta-color); /* Turns Salmon on hover */
+    transform: translateY(-5px);
+}
+
+/* This class will be added by JavaScript when we scroll down */
+.scroll-btn.show {
+    opacity: 1;
+    pointer-events: auto;
 }
