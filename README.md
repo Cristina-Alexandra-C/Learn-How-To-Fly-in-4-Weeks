@@ -1,8 +1,7 @@
 # Learn How to Fly in 4 Weeks ✈️
 
-A high-conversion, one-page sales website designed to market a digital aviation guidebook. This project demonstrates responsive web design, semantic HTML structure, and conversion-focused UX patterns.
+A high-conversion, one-page sales website designed to market a digital aviation guidebook. This project demonstrates responsive web design, semantic HTML structure, and conversion-focused UX patterns. The digital book cover was created by me in Canva, while the picture of the pilot was A.I. generated.
 
-🔗 **Live Demo:** 
 
 ##  Project Objective
 To create an SEO-friendly landing page that guides users through a sales tunnel:
